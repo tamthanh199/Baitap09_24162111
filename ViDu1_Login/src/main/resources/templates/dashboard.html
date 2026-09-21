@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{layouts/layout :: head('Dashboard')}">
+</head>
+
+<body>
+
+
+<header
+    th:replace="~{fragments/header :: header}">
+</header>
+
+
+<main class="container">
+
+    <div class="panel">
+
+        <h1>Dashboard</h1>
+
+
+        <p>
+            Đăng nhập thành công.
+        </p>
+
+
+        <p>
+            Tài khoản:
+            <strong
+                sec:authentication="name">
+                admin@gmail.com
+            </strong>
+        </p>
+
+
+			<p>
+				Quyền: <strong sec:authorize="hasRole('ADMIN')"> ADMIN </strong> <strong
+					sec:authorize="hasRole('USER')"> USER </strong>
+			</p>
+
+		</div>
+
+</main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+
+<head>
+
+    <title>
+        Trang chủ
+    </title>
+
+</head>
+
+
+<body>
+
+
+<main layout:fragment="content">
+
+    <div class="container">
+
+        <div class="panel">
+
+            <h1>
+                Trang chủ UTEShop
+            </h1>
+
+
+            <p>
+
+                Xin chào
+
+                <strong
+                    th:text="${
+                        #authentication.principal.fullName
+                    }">
+
+                    User
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Bạn đã đăng nhập Custom Login
+                thành công.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+</body>
+
+</html>

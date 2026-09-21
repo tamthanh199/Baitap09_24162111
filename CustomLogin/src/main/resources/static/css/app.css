@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.topbar {
+    min-height: 64px;
+    background: #172554;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+}
+
+.header-nav {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.header-nav .brand {
+    margin-right: auto;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.brand:hover {
+    color: white;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    white-space: nowrap;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid white;
+}
+
+.role {
+    background: #2563eb;
+    color: white;
+
+    padding: 4px 8px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+.link-button {
+    background: none;
+    border: 0;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin-left: 8px;
+
+    font-size: 14px;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   MAIN
+   ========================= */
+
+.container {
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    padding: 0 20px;
+}
+
+.panel {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   LOGIN
+   ========================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #eef2ff
+        );
+}
+
+.auth-card {
+    width: min(440px, 92vw);
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(15, 23, 42, 0.12);
+}
+
+.auth-card h1 {
+    color: #1d4ed8;
+
+    margin-top: 0;
+}
+
+.auth-card h2 {
+    margin-bottom: 25px;
+}
+
+.auth-card label {
+    display: block;
+
+    margin: 14px 0 6px;
+
+    font-weight: 600;
+}
+
+/*
+ * Ví dụ 2 dùng type="text"
+ * cho Username hoặc Email.
+ */
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.auth-card input:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.12);
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.btn {
+    display: inline-block;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    padding: 10px 14px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    font-size: 15px;
+}
+
+.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.primary:hover {
+    background: #1d4ed8;
+}
+
+.full {
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+/* =========================
+   ALERT
+   ========================= */
+
+.alert {
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin: 10px 0;
+}
+
+.alert.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.alert.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #64748b;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .topbar {
+        padding: 12px;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .user-info {
+        flex-wrap: wrap;
+
+        white-space: normal;
+    }
+
+    .avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+}
